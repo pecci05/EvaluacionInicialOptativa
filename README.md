@@ -1,25 +1,13 @@
-# ¡Hola! Soy Alejandro 👋
+# FernanEvents2 ECO
 
-### 🚀 Desarrollador Web & Apasionado de la Tecnología
-Me dedico al desarrollo de aplicaciones web y a la exploración de sistemas, servidor e infraestructura. Me encanta construir proyectos desde cero, resolver problemas complejos y optimizar flujos de trabajo.
+### 🚀 Función
+Este programa permite gestionar los productos y usuarios de una tienda con diversidad de tipos de productos. Permite dejar en un log los registros de las compras.
 
----
+--- ❌ No 
 
 ### 💻 Stack Tecnológico
 
-**Desarrollo Web & Software**
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 
-**Bases de Datos & Entornos**
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu_Server-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
