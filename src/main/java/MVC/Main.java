@@ -30,7 +30,6 @@ public class Main {
         listaPedido.put(producto2,2);
 
         Pedido pedido = new Pedido(gestionUsuarios.buscarUserPorID(1),listaPedido);
-        System.out.println(pedido);
         ArrayList<Pedido> pedidos = new ArrayList<>();
         pedidos.add(pedido);
 

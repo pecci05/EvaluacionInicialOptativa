@@ -18,7 +18,7 @@ public class Controlador {
         this.carrito = carrito;
         this.vista = vista;
         this.gestionProducto = gestionProducto;
-        this.historialPedidos = new HistorialPedidos();
+        this.historialPedidos = new HistorialPedidos(vista);
     }
 
     public Usuario login() {
@@ -70,10 +70,10 @@ public class Controlador {
                 }
                 case 4: {
                     pedido = new Pedido(user, carrito.getProductosCarrito());
-                    this.historialPedidos = new HistorialPedidos(pedido.getListaProductos());
+                    this.historialPedidos = new HistorialPedidos(pedido.getListaProductos(),vista);
                     historialPedidos.escribirHistorial();
                     carrito = new Carrito();
-                    pedido.mostrarFactura();
+                    pedido.mostrarFactura(vista);
                     break;
                 }
                 case 5: {
@@ -104,10 +104,10 @@ public class Controlador {
                 case 2: {
                     if (!carrito.getProductosCarrito().isEmpty()) {
                         pedido = new Pedido(user, carrito.getProductosCarrito());
-                        this.historialPedidos = new HistorialPedidos(pedido.getListaProductos());
+                        this.historialPedidos = new HistorialPedidos(pedido.getListaProductos(),vista);
                         historialPedidos.escribirHistorial();
                         carrito = new Carrito();
-                        pedido.mostrarFactura();
+                        pedido.mostrarFactura(vista);
                     } else {
                         vista.errorCarritoVacio();
                     }
@@ -130,7 +130,7 @@ public class Controlador {
         int opcion = Integer.parseInt(s.nextLine());
         switch (opcion) {
             case 1: {
-                carrito.mostrarCarrito();
+                carrito.mostrarCarrito(vista);
                 gestionProducto.getProductos().forEach(System.out::println);
                 vista.pedirProductoPorSeleccionar();
                 int idProducto = Integer.parseInt(s.nextLine());
@@ -143,7 +143,7 @@ public class Controlador {
                 break;
             }
             case 2: {
-                carrito.mostrarCarrito();
+                carrito.mostrarCarrito(vista);
                 vista.preguntarIDPorRetirarCarrito();
                 int id = Integer.parseInt(s.nextLine());
                 carrito.eliminarProducto(id);
@@ -152,7 +152,7 @@ public class Controlador {
             case 3: {
             } default: {vista.errorSeleccionarProducto();}
         }
-        carrito.mostrarCarrito();
+        carrito.mostrarCarrito(vista);
     }
 
     private void menuUsuarios() {
@@ -322,6 +322,6 @@ public class Controlador {
     }
 
     private void leerPedidosRealizados() {
-        historialPedidos.leerHistorial();
+        historialPedidos.leerHistorial(vista);
     }
 }

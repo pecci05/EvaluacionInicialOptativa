@@ -1,5 +1,7 @@
 package MVC.Modelo;
 
+import MVC.Vista;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,10 +11,10 @@ public class Carrito {
     private HashMap<Producto,Integer> productosCarrito;
     private float total;
 
-    public void mostrarCarrito(){
-        System.out.println("-----------------Carrito-------------------");
+    public void mostrarCarrito(Vista vista){
+        vista.adornoCarritoInicio();
         productosCarrito.forEach((p1,c1) -> System.out.println(p1 + "   x" + c1 + "-> " + p1.getPrecio()*c1 + "€"));
-        System.out.println("-------------------------------------------");
+        vista.adornoCarritoFin();
     }
 
     public void agregarProducto(Producto producto, int cantidad){

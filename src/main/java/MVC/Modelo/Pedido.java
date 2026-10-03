@@ -1,5 +1,7 @@
 package MVC.Modelo;
 
+import MVC.Vista;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,11 +33,11 @@ public class Pedido {
         listaProductos.keySet().forEach(System.out::println);
     }
 
-    public void mostrarFactura(){
-        System.out.println("------------------------------------------");
+    public void mostrarFactura(Vista vista){
+        vista.adornofactura();
         listaProductos.forEach((p1,c1) -> System.out.println(p1 + "   x" + c1 + "-> " + p1.getPrecio()*c1 + "€"));
-        System.out.println("Total a pagar: " + total);
-        System.out.println("-------------------------------------------");
+        vista.mostrarTotalAPagar(total);
+        vista.adornofactura();
     }
 
 //    public String toString(){

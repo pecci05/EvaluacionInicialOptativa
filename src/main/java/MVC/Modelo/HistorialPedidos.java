@@ -1,5 +1,7 @@
 package MVC.Modelo;
 
+import MVC.Vista;
+
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,27 +13,27 @@ public class HistorialPedidos {
     private BufferedWriter bw;
     private BufferedReader br;
 
-    public HistorialPedidos() {
+    public HistorialPedidos(Vista vista) {
         pedidos = new HashMap<>();
         try {
             this.bw = new BufferedWriter(new FileWriter("src/main/java/Files/registrosPedidos.csv", true));
             this.br = new BufferedReader(new FileReader("src/main/java/Files/registrosPedidos.csv"));
         } catch (IOException e) {
-            System.out.println("El archivo de registros no se puede leer");
+            vista.errorArchivoHistorial();
         }
     }
 
-    public HistorialPedidos(HashMap<Producto, Integer> pedidos) {
+    public HistorialPedidos(HashMap<Producto, Integer> pedidos, Vista vista) {
         this.pedidos = pedidos;
         try {
             this.bw = new BufferedWriter(new FileWriter("src/main/java/Files/registrosPedidos.csv", true));
             this.br = new BufferedReader(new FileReader("src/main/java/Files/registrosPedidos.csv"));
         } catch (IOException e) {
-            System.out.println("El archivo de registros no se puede leer");
+            vista.errorArchivoHistorial();
         }
     }
 
-    public void leerHistorial() {
+    public void leerHistorial(Vista vista) {
         try {
             Producto producto = null;
             String linea = br.readLine();
@@ -43,7 +45,7 @@ public class HistorialPedidos {
                     fecha = linea.replace("-","");
                     LocalDateTime fechaObj = LocalDateTime.parse(linea);
                     DateTimeFormatter formatoBonito = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-                    System.out.println("-- " + fechaObj.format(formatoBonito));
+                    vista.darFormatoAFecha(fechaObj,formatoBonito);
                 }else {
                     propiedades = linea.split(";");
 
@@ -52,14 +54,12 @@ public class HistorialPedidos {
                     } else if (Integer.parseInt(propiedades[0]) == 2) {
                         producto = new ProductoFisico(Integer.parseInt(propiedades[1]), propiedades[2], Float.parseFloat(propiedades[3]), Integer.parseInt(propiedades[4]), propiedades[5], Float.parseFloat(propiedades[6]), Float.parseFloat(propiedades[7]));
                     }
-
-
-                    System.out.println(producto + " x " + propiedades[8]);
+                    vista.mostrarProducto(producto,propiedades[8]);
                 }
                 linea = br.readLine();
             }
         } catch (IOException e) {
-            System.out.println("No se puede leer");
+            vista.errorArchivoHistorial();
         }
     }
 

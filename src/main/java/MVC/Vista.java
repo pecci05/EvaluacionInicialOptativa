@@ -3,6 +3,10 @@ package MVC;
 import MVC.Modelo.Producto;
 import MVC.Modelo.Usuario;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+
 public class Vista {
     ///MENUS
     public void menuPrincipalAdmin(){
@@ -93,9 +97,24 @@ public class Vista {
 
     public void errorConversionANumero(){System.out.println("El valor introducido no puede ser una cadena");}
 
+    public void errorArchivoHistorial(){System.out.println("El archivo de registros no se puede leer");}
+
     public void errorCarritoVacio(){System.out.println("No puedes cerrar el pedido si no añades nada al carrito");}
 
     public void errorNoHayStock(Producto producto){System.out.println("No Hay suficiente stock de " + producto.getNombre());}
 
     public void preguntarIDPorRetirarCarrito(){System.out.println("Escribe el ID del producto que quieras retirar del carrito");}
+
+    public void darFormatoAFecha(LocalDateTime fechaObj, DateTimeFormatter formatoBonito){System.out.println("-- " + fechaObj.format(formatoBonito));}
+
+    public void mostrarProducto(Producto producto, String propiedad){System.out.println(producto + " x " + propiedad);}
+
+    public void adornoCarritoInicio(){System.out.println("-----------------Carrito-------------------");}
+
+    public void adornoCarritoFin(){System.out.println("-------------------------------------------");}
+
+    public void adornofactura(){System.out.println("-------------------------------------------");}
+
+    public void mostrarTotalAPagar(float total){System.out.println("Total a pagar: " + total);}
+
 }
