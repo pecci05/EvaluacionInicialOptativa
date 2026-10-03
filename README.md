@@ -5,10 +5,11 @@ Este programa permite gestionar los productos y usuarios de una tienda con diver
 
 --- ❌ No guarda qué usuario ha realizado la compra, debido a que no tenemos persistencia de los usuarios
 
-### 💻 Diseño
+### 🔳 Diseño
 El diseño de este programa ha sido el más sencillo que se podía hacer, dedicado a una interfaz de consola.
 
-### 💻 Extras elegidos
+### ➰ Extras elegidos
+
 --- ⚫ Categorías que ordenan a los productos
 --- ⚫ Persistencia en el historial de pedidos
 --- ⚫ Sistema de roles
