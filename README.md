@@ -2,6 +2,7 @@
 
 ### 🚀 Función
 Este programa permite gestionar los productos y usuarios de una tienda con diversidad de tipos de productos. Permite dejar en un log los registros de las compras.
+*Realizado con Java*
 
 --- ❌ No guarda qué usuario ha realizado la compra, debido a que no tenemos persistencia de los usuarios
 
