@@ -8,19 +8,19 @@ Este programa permite gestionar los productos y usuarios de una tienda con diver
 ### 🔳 Diseño
  - ## MVC: Programa estructurado con la arquitectura Modelo-Vista-Controlador.
    ```text
-mi-proyecto/
-├── src/
-│   ├── assets/          # Imágenes, estilos y fuentes
-│   ├── components/      # Componentes reutilizables
-│   │   ├── Header.js
-│   │   └── Footer.js
-│   ├── pages/           # Vistas o páginas principales
-│   ├── App.js           # Componente principal
-│   └── index.js         # Punto de entrada de la aplicación
-├── public/              # Archivos estáticos públicos
-├── .gitignore           # Archivos ignorados por Git
-├── package.json         # Dependencias y scripts del proyecto
-└── README.md            # Documentación del proyecto
+   mi-proyecto/
+   ├── src/
+   │   ├── assets/          # Imágenes, estilos y fuentes
+   │   ├── components/      # Componentes reutilizables
+   │   │   ├── Header.js
+   │   │   └── Footer.js
+   │   ├── pages/           # Vistas o páginas principales
+   │   ├── App.js           # Componente principal
+   │   └── index.js         # Punto de entrada de la aplicación
+   ├── public/              # Archivos estáticos públicos
+   ├── .gitignore           # Archivos ignorados por Git
+   ├── package.json         # Dependencias y scripts del proyecto
+   └── README.md            # Documentación del proyecto
 ```
 
 
