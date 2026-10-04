@@ -2,36 +2,56 @@
 
 ### 🚀 Función
 Este programa permite gestionar los productos y usuarios de una tienda con diversidad de tipos de productos. Permite dejar en un log los registros de las compras.
+*Realizado con Java*
 
---- ❌ No 
+--- ❌ No guarda qué usuario ha realizado la compra, debido a que no tenemos persistencia de los usuarios
 
-### 💻 Stack Tecnológico
+### 🔳 Diseño
+ - ## MVC: Programa estructurado con la arquitectura Modelo-Vista-Controlador.
+   ```text
+   src/
+   └── main/
+        └── java/
+              ├── Files/
+              │   └── registrosPedidos.csv     # Archivo CSV para la persistencia/registro de pedidos
+              └── MVC/
+                   ├── Modelo/                  # Clases del modelo de dominio y lógica de negocio
+                   │   ├── Carrito.java
+                   │   ├── Categorias.java      # Enum de categorías de productos
+                   │   ├── GestionProducto.java
+                   │   ├── GestionUsuarios.java
+                   │   ├── HistorialPedidos.java
+                   │   ├── Pedido.java
+                   │   ├── Producto.java
+                   │   ├── ProductoDigital.java # Herencia de Producto (digital)
+                   │   ├── ProductoFisico.java  # Herencia de Producto (físico)
+                   │   └── Usuario.java
+                   ├── Controlador.java         # Controlador para la mediación entre Vista y Modelo
+                   ├── Main.java                # Punto de entrada de la aplicación
+                   └── Vista.java               # Interfaz de usuario / presentación
+   ```
+
+
+### ➰ Extras elegidos
+
+--- ⚫ Categorías que ordenan a los productos
+--- ⚫ Persistencia en el historial de pedidos
+--- ⚫ Sistema de roles
+
+
+### Cómo ejecutarlo
+-- Desde IDE
+ 1. Intalar JDK
+ 2. Importar el proyecto al IDE
+ 3. Ejecuta el Main.java
+
+-- Desde .jar
+ 1. Instalar JDK
+ 2. Acceder al directorio ".\Evaluacion_inicial_OPT\out\artifacts\Evaluacion_inicial_OPT_jar"
+ 3. Abrir CMD
+ 4. ejecutar el comando "java -jar Evaluacion_inicial_OPT.jar"
 
 
 
----
 
-### ⚡ Sobre mí
 
-- 🛠️ **Áreas de interés:** Desarrollo Web Full-Stack, administración de servidores Linux y bases de datos.
-- 🎮 **Proyectos secundarios:** Desarrollo de videojuegos 2D y herramientas personalizadas.
-- 🎯 **En constante aprendizaje:** Perfeccionando patrones de diseño, arquitectura web e inglés (nivel B2+).
-
----
-
-### 📊 Mis Estadísticas en GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=TU_USUARIO&show_icons=true&theme=radial&hide_border=true&count_private=true" alt="Estadísticas de GitHub" height="175"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USUARIO&layout=compact&theme=radial&hide_border=true" alt="Lenguajes más usados" height="175"/>
-</p>
-
----
-
-### 📫 Conéctate conmigo
-
-<p align="left">
-  <a href="https://www.linkedin.com/in/TU_PERFIL_LINKEDIN" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-</p>
