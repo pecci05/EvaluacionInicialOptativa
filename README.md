@@ -8,19 +8,26 @@ Este programa permite gestionar los productos y usuarios de una tienda con diver
 ### 🔳 Diseño
  - ## MVC: Programa estructurado con la arquitectura Modelo-Vista-Controlador.
    ```text
-   mi-proyecto/
-   ├── src/
-   │   ├── assets/          # Imágenes, estilos y fuentes
-   │   ├── components/      # Componentes reutilizables
-   │   │   ├── Header.js
-   │   │   └── Footer.js
-   │   ├── pages/           # Vistas o páginas principales
-   │   ├── App.js           # Componente principal
-   │   └── index.js         # Punto de entrada de la aplicación
-   ├── public/              # Archivos estáticos públicos
-   ├── .gitignore           # Archivos ignorados por Git
-   ├── package.json         # Dependencias y scripts del proyecto
-   └── README.md            # Documentación del proyecto
+src/
+└── main/
+    └── java/
+        ├── Files/
+        │   └── registrosPedidos.csv     # Archivo CSV para la persistencia/registro de pedidos
+        └── MVC/
+            ├── Modelo/                  # Clases del modelo de dominio y lógica de negocio
+            │   ├── Carrito.java
+            │   ├── Categorias.java      # Enum de categorías de productos
+            │   ├── GestionProducto.java
+            │   ├── GestionUsuarios.java
+            │   ├── HistorialPedidos.java
+            │   ├── Pedido.java
+            │   ├── Producto.java
+            │   ├── ProductoDigital.java # Herencia de Producto (digital)
+            │   ├── ProductoFisico.java  # Herencia de Producto (físico)
+            │   └── Usuario.java
+            ├── Controlador.java         # Controlador para la mediación entre Vista y Modelo
+            ├── Main.java                # Punto de entrada de la aplicación
+            └── Vista.java               # Interfaz de usuario / presentación
 ```
 
 
