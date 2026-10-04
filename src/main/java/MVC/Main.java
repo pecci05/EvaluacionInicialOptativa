@@ -39,8 +39,6 @@ public class Main {
         HashMap<Producto,Integer> diccionario = new HashMap<>();
 
 
-
-
         Carrito carrito = new Carrito(diccionario);
 
         Controlador controlador = new Controlador(gestionUsuarios,gestionProducto,carrito,vista);

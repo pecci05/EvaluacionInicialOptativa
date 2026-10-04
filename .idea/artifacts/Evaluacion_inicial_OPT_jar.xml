@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Evaluacion_inicial_OPT:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Evaluacion_inicial_OPT_jar</output-path>
+    <root id="archive" name="Evaluacion_inicial_OPT.jar">
+      <element id="module-output" name="Evaluacion_inicial_OPT" />
+    </root>
+  </artifact>
+</component>

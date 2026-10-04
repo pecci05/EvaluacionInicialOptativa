@@ -8,6 +8,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Vista {
+
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     ///MENUS
     public void menuPrincipalAdmin(){
         System.out.println("1. Gestionar productos");
@@ -48,10 +59,10 @@ public class Vista {
     public void mostrarCredencialesLogin(Usuario user){System.out.println("Te has logeado con: "+ user.getNombre() + " - " + user.getEmail());}
 
     public void pedirNombreUsuario(){
-        System.out.println("Escribe el nombre del usuario");
+        System.out.println(ANSI_CYAN + "Escribe el nombre del usuario" + ANSI_RESET);
     }
 
-    public void pedirPasswUsuario(){System.out.println("Escribe la contraseña del usuario");}
+    public void pedirPasswUsuario(){System.out.println(ANSI_CYAN + "Escribe la contraseña del usuario" + ANSI_RESET);}
 
     public void pedirEmailUsuario(){
         System.out.println("Escribe el email del usuario");
@@ -76,38 +87,38 @@ public class Vista {
     }
 
     public void pedirNombreProducto(){
-        System.out.println("Escribe el nombre del producto");
+        System.out.println(ANSI_CYAN + "Escribe el nombre del producto" + ANSI_RESET);
     }
-    public void pedirPrecioProducto(){System.out.println("Escribe el precio del producto");}
-    public void pedirStockProducto(){System.out.println("Escribe el stock del producto");}
-    public void pedirCategoria(){System.out.println("Escribe la categoría del artículo. (HOGAR/LIMPIEZA/ALIMENTACION/OCIO/TECNOLOGIA/OTROS)");}
+    public void pedirPrecioProducto(){System.out.println(ANSI_CYAN + "Escribe el precio del producto" + ANSI_RESET);}
+    public void pedirStockProducto(){System.out.println(ANSI_CYAN + "Escribe el stock del producto" + ANSI_RESET);}
+    public void pedirCategoria(){System.out.println(ANSI_CYAN + "Escribe la categoría del artículo. (HOGAR/LIMPIEZA/ALIMENTACION/OCIO/TECNOLOGIA/OTROS)" + ANSI_RESET);}
 
-    public void pedirPesoProductoFisico(){System.out.println("Escribe el peso del producto físico");}
-    public void pedirGastosEnvioProductoFisico(){System.out.println("Escribe los gastos de envíos del producto físico");}
+    public void pedirPesoProductoFisico(){System.out.println(ANSI_CYAN + "Escribe el peso del producto físico" + ANSI_RESET);}
+    public void pedirGastosEnvioProductoFisico(){System.out.println(ANSI_CYAN + "Escribe los gastos de envíos del producto físico" + ANSI_RESET);}
 
-    public void pedirTamanoDescargaProductoDigital(){System.out.println("Escribe el tamano de descarga del producto digital");}
-    public void pedirLicenciaProductoDigital(){System.out.println("Escribe la licencia del producto digital");}
+    public void pedirTamanoDescargaProductoDigital(){System.out.println( ANSI_CYAN + "Escribe el tamano de descarga del producto digital" + ANSI_RESET);}
+    public void pedirLicenciaProductoDigital(){System.out.println(ANSI_CYAN + "Escribe la licencia del producto digital" + ANSI_RESET);}
 
-    public void mensajeFiltrarPrecio(){System.out.println("Se va a filtrar por precio");}
-    public void mensajeFiltrarCategoria(){System.out.println("Se va a filtrar por categoría");}
+    public void mensajeFiltrarPrecio(){System.out.println(ANSI_YELLOW + "Se va a filtrar por precio" + ANSI_RESET);}
+    public void mensajeFiltrarCategoria(){System.out.println(ANSI_YELLOW + "Se va a filtrar por categoría" + ANSI_RESET);}
 
-    public void errorSeleccionarProducto(){System.out.println("No se ha reconocido el tipo de producto");}
+    public void errorSeleccionarProducto(){System.out.println(ANSI_RED + "No se ha reconocido el tipo de producto" + ANSI_RESET);}
 
-    public void errorSeleccion(){System.out.println("No se ha reconocido la opción");}
+    public void errorSeleccion(){System.out.println(ANSI_RED + "No se ha reconocido la opción" + ANSI_RESET);}
 
-    public void errorConversionANumero(){System.out.println("El valor introducido no puede ser una cadena");}
+    public void errorConversionANumero(){System.out.println(ANSI_RED + "El valor introducido no puede ser una cadena" + ANSI_RESET);}
 
-    public void errorArchivoHistorial(){System.out.println("El archivo de registros no se puede leer");}
+    public void errorArchivoHistorial(){System.out.println(ANSI_RED + "El archivo de registros no se puede leer" + ANSI_RESET);}
 
-    public void errorCarritoVacio(){System.out.println("No puedes cerrar el pedido si no añades nada al carrito");}
+    public void errorCarritoVacio(){System.out.println(ANSI_RED + "No puedes cerrar el pedido si no añades nada al carrito" + ANSI_RESET);}
 
-    public void errorNoHayStock(Producto producto){System.out.println("No Hay suficiente stock de " + producto.getNombre());}
+    public void errorNoHayStock(Producto producto){System.out.println(ANSI_RED + "No Hay suficiente stock de " + producto.getNombre() + ANSI_RESET);}
 
-    public void preguntarIDPorRetirarCarrito(){System.out.println("Escribe el ID del producto que quieras retirar del carrito");}
+    public void preguntarIDPorRetirarCarrito(){System.out.println(ANSI_CYAN + "Escribe el ID del producto que quieras retirar del carrito" + ANSI_RESET);}
 
-    public void darFormatoAFecha(LocalDateTime fechaObj, DateTimeFormatter formatoBonito){System.out.println("-- " + fechaObj.format(formatoBonito));}
+    public void darFormatoAFecha(LocalDateTime fechaObj, DateTimeFormatter formatoBonito){System.out.println(ANSI_GREEN + "-- " + fechaObj.format(formatoBonito) + ANSI_RESET);}
 
-    public void mostrarProducto(Producto producto, String propiedad){System.out.println(producto + " x " + propiedad);}
+    public void mostrarProducto(Producto producto, String propiedad){System.out.println( producto + " x " + propiedad);}
 
     public void adornoCarritoInicio(){System.out.println("-----------------Carrito-------------------");}
 
@@ -115,6 +126,6 @@ public class Vista {
 
     public void adornofactura(){System.out.println("-------------------------------------------");}
 
-    public void mostrarTotalAPagar(float total){System.out.println("Total a pagar: " + total);}
+    public void mostrarTotalAPagar(float total){System.out.println("Total a pagar: " + ANSI_BLUE+ total + ANSI_RESET);}
 
 }
